@@ -1,3 +1,3 @@
 # leafnow
 
-https://mhsrusti.github.io/leafnow/ Tap here for a quick review of my project
+ Tap here for a quick review of my project
