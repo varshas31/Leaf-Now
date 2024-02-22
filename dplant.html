@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Donation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #34495e; /* Dark Blue */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .donation-container {
+            background-color: #fff; /* White */
+            padding: 20px;
+            width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .donation-form {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .donation-button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .donation-button:hover {
+            background-color: #243946;
+        }
+
+        .donation-form input[type="text"],
+        .donation-form input[type="email"],
+        .donation-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .donation-form button[type="submit"] {
+            background-color: #1f4660;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .donation-form button[type="submit"]:hover {
+            background-color: #4f6b7e;
+        }
+    </style>
+</head>
+<body>
+    <div class="donation-container">
+        <form class="donation-form" action="certificate.php" method="POST"> <!-- Changed action to certificate.php -->
+            <h2>PLANT DONATION FORM</h2>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            <label for="plantDescription">Description of Plants:</label>
+            <textarea id="plantDescription" name="plantDescription" rows="4" required></textarea> <!-- Changed id to plantDescription -->
+            <button type="submit">Submit Donation</button>
+        </form>
+    </div>
+</body>
+</html>

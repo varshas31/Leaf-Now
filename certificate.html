@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Completion Certificate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .certificate {
+            width: 100%; /* Set the width to 100% for full page width */ 
+            background-size: cover;
+            border: 6px solid #032a10;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            height: 100vh;
+        }
+        
+        .certificate h1 {
+            font-size: 36px;
+            color: #2e5737;
+            margin-bottom: 10px;
+        }
+        
+        .certificate p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .recipient {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .signature {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            max-width: 150px;
+        }
+
+        .seal {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            max-width: 250px;
+        }
+        .sign {
+            position: absolute;
+            bottom: 7px;
+            right: 100px;
+            max-width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <img src="img/core-img/logo(2).png" alt="" width="20%">
+        <h1>&emsp;&emsp;DONATION CERTIFICATE</h1>
+        <p>&emsp;&emsp;&emsp;&emsp;This certificate is presented to:</p>
+        <div class="recipient"> {{UserFirstName}} {{UserLastName}}</div>
+        <p>in recognition of their generous contribution to our company's <br>sustainability efforts through the donation of:</p>
+        <div class="recipient">&emsp;&emsp;{{PlantDescription}}</div>
+        <p>&emsp;&emsp;&emsp;&emsp;Your kind and eco-conscious contribution has a significant impact on our commitment to a greener, healthier planet.<br>Your support and dedication to our cause are deeply appreciated.<br>
+
+        <div class="recipient"> <br>&emsp;&emsp;&emsp;&emsp;This certificate is awarded as a token of our gratitude.<br>&emsp;&emsp;&emsp;&emsp;Thank you for your donation and support</div>
+        <img class="seal" src="img/core-img/seal.png" alt="Seal" width="60%">
+        <div class="sign">Leaf Now</div>
+    </div>
+</body>
+</html>

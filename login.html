@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="signup.css">
+  <style>
+         .radio-container {
+          display: inline-block;
+          margin-right:10px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <?php if (isset($_GET['error'])) { ?>
+
+    <p class="error"><?php echo $_GET['error']; ?></p>
+
+<?php } ?>
+
+<!-- partial:index.partial.html -->
+<div class="login-page">
+  <div class="form">
+    <form class="register-form" action="connect.php" method="post">
+      <input type="text" placeholder="firstname" id="firstName" name="firstName" required/>
+      <input type="text" placeholder="lastname" id="lastName"  name="lastName" required/>
+
+      <div class="radio-container">
+        <input type="radio" id="male" name="gender" value="m" id="male">
+        <label for="male">Male</label>
+    </div>
+    <div class="radio-container">
+        <input type="radio" id="female" name="gender"  value="f" id="female">
+        <label for="female">Female</label>
+    </div>
+    <div class="radio-container">
+        <input type="radio" id="other" name="gender" value="o" id="others">
+        <label for="other">Other</label>
+        </div>
+      
+      <input type="text" placeholder="email address" id="email" name="email" required/>
+      <input type="password" placeholder="password" id="password" name="password" required/>
+      <input type="number" placeholder="phone number" id="number" name="number" required/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+    <form class ="mail-form" action="register.php" method="post">
+      
+    </form>
+    <form class="login-form" action="login.php" method="post">
+      <input type="text" placeholder="email" name="email" id="email" required/>
+      <input type="password" placeholder="password" name="password" id="password" required/>
+      <button>login</button>
+      <p class="message">Not registered? <a href="#">Create an account</a></p>
+    </form>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script>
+    $('.message a').click(function(){
+      $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+   });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+*{
+    font-family:cursive;
+    color:rgb(1, 9, 12);
+}
+
+.quote{
+    color:rgb(1, 106, 1);
+    text-align:center;
+    }
+
+.garden{
+    width:50%;
+    display:block;
+    margin:0px auto;
+}
+ 
